@@ -1,0 +1,9 @@
+#How to run on my /nobackup
+
+# 1. run the .loadenv1 from the home directory
+
+# 2. load py270 environment
+
+# 3. use my nice pipeline as per final_bash scripts
+
+##### I must make generic versions of these scripts then push them to github #####
