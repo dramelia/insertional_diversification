@@ -13,7 +13,6 @@ https://bitbucket.org/mathildefog/switchillumina/src/master/
 	# bcftools version 1.15 via bioconda
 #Versions used that not specified in original pipeline:	
 	# trimgalore 0.6.7
-...
 	
 #Changes from original pipeline script:
 	# fastqc 0.11.5 would have the the version used for the original pipeline as per the dates. This is no 

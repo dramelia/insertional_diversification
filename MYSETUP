@@ -7,3 +7,6 @@
 # 3. use my nice pipeline as per final_bash scripts
 
 ##### I must make generic versions of these scripts then push them to github #####
+#For samples 1 - 28 and 64 I have copied the 'aftertrinity.sh' bash that is working into the amples folders as 
+'aftertrinity_NEW'. This is the same as the copy on my repositiory from 15/05 but needed a different name 
+because there is already an old aftertrinity.sh in these folders. 

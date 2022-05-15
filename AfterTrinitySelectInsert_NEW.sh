@@ -22,7 +22,7 @@ HG19DIR="/nobackup/medafisa/hg19"
 
 echo going to node
 
-#samtools view -h -L $DONOR.insertListForBlast.bed $DONOR.bam |samtools view -b -h > $DONOR.inserts.bam
+samtools view -h -L $DONOR.insertListForBlast.bed $DONOR.bam |samtools view -b -h > $DONOR.inserts.bam
 
 bcftools mpileup -f $HG19DIR/hg19.fasta $DONOR.inserts.bam --max-depth 10000 | bcftools call -c > file.vcf
 
