@@ -36,6 +36,7 @@ longer to run. Inserts are expected to be <2000bp long as per the original paper
 # Test runs:
 	# Scripts here will enable each component of the pipeline to be tested individually so bespoke changes can be made.
 	# I have left in the grid engine intructions for each script to give a 'ball-park' estimate for running. This work was undertaken on ARC3, part of the High Performance Computing facilities at the University of Leeds, UK https://arcdocs.leeds.ac.uk/welcome.html. 
+	# Please see the original pipeline available at https://bitbucket.org/mathildefog/switchillumina/src/master/ and the scripts 'beforetrinity.sh', 'trinity.sh' and 'aftertrinity_NEW' for the order in which the test scripts should be run. 
 	
 # Analysis runs:
 	# The scripts 'beforetrinity.sh', 'trinity.sh' and 'aftertrinity_NEW' collate sets of scripts into sections to enable simple running, debugging and extraction of results. Depending on your computing system, they could be collated. Trinity likes to run in paralled, hence why it is separated out. It will error if given insuffiencnt compute. It will also error if contigs incomplete due to inadequate depth. Unhelpfully this generates the same exit error code.
