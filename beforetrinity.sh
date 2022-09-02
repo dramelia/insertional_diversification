@@ -2,19 +2,19 @@
 
 #$ -V -cwd
 
-#$ -l h_rt=24:00:00
+#$ -l h_rt=6:00:00
 
 #$ -l h_vmem=100G
 
 #$ -m be
 
-export RAW1=SRR5430225_A_1.fastq
-export RAW2=SRR5430225_A_2.fastq
-export VAL1=SRR5430225_A_1_val_1.fq
-export VAL2=SRR5430225_A_2_val_2.fq
-export SAMPLE=SRR5430225_A
+export RAW1=<sample_id>_1.fastq
+export RAW2=<sample_id>_2.fastq
+export VAL1=<sample_id>_1_val_1.fq
+export VAL2=<sample_id>_2_val_2.fq
+export SAMPLE=<sample_id>
 
-/nobackup/medafisa/data/$SAMPLE/trimgalore.sh ./trimgalore &&
+/PATH/TO/SAMPLE/FOLDER/$SAMPLE/trimgalore.sh ./trimgalore &&
 ./bwa.sh &&
 ./samtools.sh &&
 ./samtoolsindex.sh &&
