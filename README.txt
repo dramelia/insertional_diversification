@@ -38,7 +38,8 @@ longer to run. Inserts are expected to be <2000bp long as per the original paper
 	# I have left in the grid engine intructions for each script to give a 'ball-park' estimate for running. This work was undertaken on ARC3, part of the High Performance Computing facilities at the University of Leeds, UK https://arcdocs.leeds.ac.uk/welcome.html. 
 	
 # Analysis runs:
-	# The scripts 'beforetrinity.sh', 'trinity.sh' and 'aftertrinity_NEW' collate sets of scripts into sections to enable simple running, debugging and extraction of results. Depending on your computing system, they could be collated. Trinity likes to run in paralled, hence why it is separated out. It will error if given insuffiencnt compute. It will also error if contigs incomplete due to inadequate depth. Unhelpfully this generates the same exit error code. 
+	# The scripts 'beforetrinity.sh', 'trinity.sh' and 'aftertrinity_NEW' collate sets of scripts into sections to enable simple running, debugging and extraction of results. Depending on your computing system, they could be collated. Trinity likes to run in paralled, hence why it is separated out. It will error if given insuffiencnt compute. It will also error if contigs incomplete due to inadequate depth. Unhelpfully this generates the same exit error code.
+	# Edit the 'export' functions out of the test scripts called by the && function in 'beforetrinity.sh', 'trinity.sh' and 'aftertrinity_NEW' so the sample ids can just be changed in these 3 scripts rather than all of them!
 	
 # Recommendations for larger projects:
 	# Trinity could be replaced by a more computationally efficient de novo transcription assembler. A good review of programmes is in this paper: https://academic.oup.com/gigascience/article/8/9/giz100/5559527. Changing the assembler will require review of the original java scripts. 
