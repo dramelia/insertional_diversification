@@ -12,7 +12,7 @@ export SAMPLE=<sample_id>
 
 echo going to node
 
-java -jar /PATH/TO/IlluminaSwitchScripts/TsvAnnotatedToInsertId.jar $SAMPLE
+java -jar /PATH/TO/SwitchScriptsIllumina/TsvAnnotatedToInsertId.jar $SAMPLE
 
 echo finished
 
