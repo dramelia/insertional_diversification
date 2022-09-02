@@ -12,6 +12,6 @@ export SAMPLE=<sample_id>
 
 echo going to node
 
-java -jar /nobackup/medafisa/switchillumina/FindOverCoverRegion.jar $SAMPLE 40 50
+java -jar /PATH/TO/IlluminaSwithScripts/FindOverCoverRegion.jar $SAMPLE 40 50
 
 echo finished
