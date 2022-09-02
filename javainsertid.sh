@@ -8,9 +8,11 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
-java -jar /nobackup/medafisa/switchillumina/TsvAnnotatedToInsertId.jar $SAMPLE
+java -jar /PATH/TO/IlluminaSwitchScripts/TsvAnnotatedToInsertId.jar $SAMPLE
 
 echo finished
 
