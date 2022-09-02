@@ -1,9 +1,9 @@
 #How to configure the SwitchIllumina pipeline from https://bitbucket.org/mathildefog/switchillumina/src/master/ 
-to work in 2022. ome programmes have been updated to avoid bugs in older versions as long as they retain the 
+to work in 2022. Some programmes have been updated to avoid bugs in older versions as long as they retain the 
 informatic function intended in the original pipeline. 
 
 #Setting up the environment
-#Linux bash version:
+#Linux
 #Create a python 2.70 environment.
 #Load the following versions of the programmes listed on 
 https://bitbucket.org/mathildefog/switchillumina/src/master/
@@ -17,24 +17,25 @@ https://bitbucket.org/mathildefog/switchillumina/src/master/
 #Changes from original pipeline script:
 	# fastqc 0.11.5 would have the the version used for the original pipeline as per the dates. This is no 
 longer available. The only change that may affect this pipeline is that v0.11.6 and beyond automatically disable 
-the kmer module. Due to the nature of the swith region we would like to keep over-represented sequences. amd 
-therefore the module was re-enabled as per the v0.11.6 instructions o github 
+the kmer module. Due to the nature of the swith region we would like to keep over-represented sequences, and 
+therefore the module was re-enabled as per the v0.11.6 instructions on github 
 https://github.com/s-andrews/FastQC/releases.
 	# samtools command in step 2: now reads $samtools sort $SAMPLE.notSorted.bam -o $SAMPLE.bam  This allows 
 it to be compatible with later versions of samtools that required the -o.
 
-
-#check all versions in my shell in py270, and see if I can find where I changed a K in a source script 
-from 1 to 0 or vice versa to fit with the previous version. This may be written in my howtocode docs either 
-original or _V2.  
-
-
 #AfterTrinitySelectInsert_NEW bash script and version changes
 	#bcftools loaded via bioconda (version 1.15)
 	#check the selectedInsert_$DONOR_bpCoverage_annotated.tsv file for the max depth (more depth will take 
-longer to run. Inserts are <2000bp long from the script. Use common sense what may be a sensible depth to set if 
-some have sequenced very deeply. bcftools mpileup will use the first d- <number> reads. 
+longer to run. Inserts are expected to be <2000bp long as per the original paper (Pieper et al 2017). Deeper sequencing = more inserts found (unpublished) so I advise making d- = the maximum depth. bcftools mpileup will use the first d- <number> reads. 
 	#change mpileup depth to d-<number> using:
 #bcftools mpileup -f $HG19DIR/hg19.fasta $DONOR.inserts.bam --max-depth <INT> 
 
-#finaljava_test...which version works and RENAMEME
+# Test runs:
+	# Scripts here will enable each component of the pipeline to be tested individually so bespoke changes can be made.
+	
+# Analysis runs:
+	# The scripts 'beforetrinity.sh', 'trinity.sh' and 'aftertrinity_NEW' collate sets of scripts into sections to enable simple running, debugging and extraction of results. Depending on your computing system, they could be collated. Trinity likes to run in paralled, hence why it is separated out. It will error if given insuffiencnt compute. It will also error if contigs incomplete due to inadequate depth. Unhelpfully this generates the same exit error code. 
+	
+# Recommendations for larger projects:
+	# Trinity could be replaced by a more computationally efficient de novo transcription assembler. A good review of programmes is in this paper: https://academic.oup.com/gigascience/article/8/9/giz100/5559527. Changing the assembler will require review of the original java scripts. 
+	# Python version could be updated, but will require review of the original scripts because they are not compatible with later versions.
