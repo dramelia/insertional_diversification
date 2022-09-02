@@ -8,6 +8,8 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
 samtools sort $SAMPLE.notSorted.bam -o $SAMPLE.bam
