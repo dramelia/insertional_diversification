@@ -9,16 +9,14 @@
 #$ -m be
 
 #!/bin/bash
-DONOR=SRR5430225_A
-HG19DIR="/nobackup/medafisa/hg19"
-ILLUMINASCRIPTSDIR="/nobackup/medafisa/switchillumina"
+DONOR=<donor-id>
+HG19DIR=/PATH/TO/HG19
+ILLUMINASCRIPTSDIR=/PATH/TO/ORIGINAL/SCRIPTS 
 
 #AFTER runnin run_inserts.sh to make contig via Trinity, we check out the contig launching BLAST
 #against the switch region and the consensus insert sequence
 
 ### make sure --max-depth is set to the greatest number of reads of any insert in the selectedInsert_$DONOR_bpCoverage_annotated.tsv file #### 
-
-HG19DIR="/nobackup/medafisa/hg19"
 
 echo going to node
 
