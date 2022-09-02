@@ -9,9 +9,9 @@
 #$ -m be
 
 #!/bin/bash
-DONOR=SRR5430225_A
-HG19DIR="/nobackup/medafisa/hg19"
-ILLUMINASCRIPTSDIR="/nobackup/medafisa/switchillumina"
+DONOR=<donor_id>
+HG19DIR="/PATH/TO/hg19"
+ILLUMINASCRIPTSDIR="/PATH/TO/IlluminaSwitchScripts"
 
 #rename trinity insert.fasta files to .fa so the javascript recoginises them
 
