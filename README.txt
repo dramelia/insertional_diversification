@@ -42,6 +42,9 @@ longer to run. Inserts are expected to be <2000bp long as per the original paper
 	# The scripts 'beforetrinity.sh', 'trinity.sh' and 'aftertrinity_NEW' collate sets of scripts into sections to enable simple running, debugging and extraction of results. Depending on your computing system, they could be collated. Trinity likes to run in paralled, hence why it is separated out. It will error if given insuffiencnt compute. It will also error if contigs incomplete due to inadequate depth. Unhelpfully this generates the same exit error code.
 	# Edit the 'export' functions out of the test scripts called by the && function in 'beforetrinity.sh', 'trinity.sh' and 'aftertrinity_NEW' so the sample ids can just be changed in these 3 scripts rather than all of them!
 	
+# Annoyances:
+	# Please note 'beforetrinity.sh' will return "insert CONFIRMED" many more times than an actual insert is validated by the full pipeline, the majority will be sequencing error or have inadequate depth to assemble a full contig that has a switch/insert/switch sequence, and hence will be removed downstream. Don't get excited until the full pipeline has run successfully and confirmed which inserts are valid. 
+	
 # Recommendations for larger projects:
 	# Trinity could be replaced by a more computationally efficient de novo transcription assembler. A good review of programmes is in this paper: https://academic.oup.com/gigascience/article/8/9/giz100/5559527. Changing the assembler will require review of the original java scripts. 
 	# Python version could be updated, but will require review of the original scripts because they are not compatible with later versions.
