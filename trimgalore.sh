@@ -8,9 +8,11 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
-trim_galore --illumina --paired -q 20 --length 99 --output_dir CleaningWithTrimGalore/ SRR5430225_A_1.fastq SRR5430225_A_2.fastq
+trim_galore --illumina --paired -q 20 --length 99 --output_dir CleaningWithTrimGalore/ $SAMPLE_1.fastq $SAMPLE_2.fastq
 
 echo finished
 
