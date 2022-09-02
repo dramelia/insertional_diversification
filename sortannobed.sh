@@ -8,6 +8,8 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
 sort -k1,1V -k2,2n "selectedInsert_${SAMPLE}_Annotated.bed" > "selectedInsert_${SAMPLE}_Annotated_sorted.bed"
