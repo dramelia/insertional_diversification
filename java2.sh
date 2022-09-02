@@ -8,6 +8,8 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
 java -jar /nobackup/medafisa/switchillumina/FindOverCoverRegion.jar $SAMPLE 40 50
