@@ -8,6 +8,8 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
 python /nobackup/medafisa/switchillumina/ValidateInserts.py $SAMPLE.bam $SAMPLE 40
