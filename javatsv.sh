@@ -8,10 +8,12 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
 sort-bed "selectedInsert_${SAMPLE}_merged.bed" > "selectedInsert_${SAMPLE}_merged_sorted.bed"
 
-java -jar /nobackup/medafisa/switchillumina/CalculateInsertCoverage.jar $SAMPLE "selectedInsert_${SAMPLE}_Annotated_sorted.bed"
+java -jar /PATH/TO/SwitchScriptsIllumina/CalculateInsertCoverage.jar $SAMPLE "selectedInsert_${SAMPLE}_Annotated_sorted.bed"
 
 echo finished
