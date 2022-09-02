@@ -12,10 +12,12 @@
 
 #$ -l node_type=24core-768G
 
-export SAMPLE=SRR5430225_A
+# Trinity likes lots of memory across a parallel system. Please change grid commands to suit your resource. 
+
+export SAMPLE=<sample_id>
 
 echo going to node
 
-/nobackup/medafisa/switchillumina/./runInserts.sh $SAMPLE
+/PATH/TO/SwitchScriptsIllumina/./runInserts.sh $SAMPLE
 
 echo finished
