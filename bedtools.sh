@@ -8,6 +8,8 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
 bedtools genomecov -dz -ibam $SAMPLE.bam > "${SAMPLE}_depth_v4_bedtools.txt"
