@@ -8,8 +8,10 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
-java -jar /nobackup/medafisa/switchillumina/KeepInsertIfContigIsSwitchInsertSwitch.jar $SAMPLE
+java -jar /PATH/TO/SwitchScriptsIllumina/KeepInsertIfContigIsSwitchInsertSwitch.jar $SAMPLE
 
 echo finished
