@@ -8,6 +8,8 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
 sort-bed "selectedInsert_${SAMPLE}_merged.bed" > "selectedInsert_${SAMPLE}_merged_sorted.bed"
