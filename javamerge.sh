@@ -8,9 +8,11 @@
 
 #$ -m be
 
+export SAMPLE=<sample_id>
+
 echo going to node
 
-java -jar /nobackup/medafisa/switchillumina/Merge2Beds.jar $SAMPLE "selectedInsert_${SAMPLE}_2reads.bed" "selectedInsert_${SAMPLE}_40reads.bed"
+java -jar /PATH/TO/SwitchIlluminaScripts/Merge2Beds.jar $SAMPLE "selectedInsert_${SAMPLE}_2reads.bed" "selectedInsert_${SAMPLE}_40reads.bed"
 
 echo finished
 
