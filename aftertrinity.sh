@@ -10,7 +10,8 @@
 
 echo going to node
 
-export SAMPLE=SRR5430225_A
+export SAMPLE=<sample_id>
+export DONOR=<donor_id>
 
 #Remember to change the AfterTrinitySelectInsert_NEW.sh script to the correct depth
 
@@ -18,6 +19,3 @@ export SAMPLE=SRR5430225_A
 ./finaljava.sh &&
 
 echo done
-
-
-echo finished
